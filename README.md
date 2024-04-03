@@ -1,20 +1,8 @@
 
-# Individual Project 3:
 # Image Generation with GAN
-
-#### Due Date
-* Tuesday Apr 2, 2024 (23:59)
-
-#### Total Points 
-* 100 (One Hundred)
 
 ## Goal
 In this assignment you will be asked to implement a Generative Adversarial Networks (GAN) with [MNIST data set](http://yann.lecun.com/exdb/mnist/). This project will be completed in Python 3 using [Pytorch](https://pytorch.org/tutorials/). 
-
-<img src="https://github.com/yanhuata/DS504CS586-S20/blob/master/project3/pic/goal.png" width="80%">
-
-
-## Project Guidelines
 
 #### Data set
 
@@ -38,7 +26,6 @@ mnist_testset = datasets.MNIST(root='./data', train=False, download=True, transf
 #### Building and Compiling Generator and Discriminator
 
 In Pytorch, you can try different layers, such as “Conv2D”, and different activation functions, such as “tanh”, and “leakyRelu”. You can apply different optimizers, such as stochastic gradient descent or Adam, and different loss functions. The following is the sample code of how to build the model.
-
 
 ```python
 # Create a Generator class.
@@ -78,7 +65,6 @@ criterion = torch.nn.BCELoss()
 #### Training GAN
 
 You have the option of changing how many epochs to train your model for and how large your batch size is. The following is the sample code of how to train GAN. You can add self-defined parameters such as #epoch, learning rate scheduler to the train function.
-
 
 
 ```python
@@ -138,57 +124,6 @@ plt.axis("off")
 plt.imshow(I_generated, cmap='gray')
 plt.show()
 ```
-
-## Deliverables
-
-Please compress all the below files into a zipped file and submit the zip file (firstName_lastName_GAN.zip) to Canvas. 
-
-#### PDF Report
-* Set of Experiments Performed: Include a section describing the set of experiments that you performed, what structures you experimented with (i.e., number of layers, number of neurons in each layer), what hyperparameters you varied (e.g., number of epochs of training, batch size, and any other parameter values, weight initialization schema, activation function), what kind of loss function you used and what kind of optimizer you used. 
-* Special skills: Include the skills that can improve the generation quality. Here are some [tips](https://github.com/soumith/ganhacks) that may help.   
-* Visualization: Include 25 (5\*5) final generated images which are formatted as the example in Goal and a loss plot of the generator and discriminator during your training. For generated images, you need to generate at least one image for each digit. 
-
-#### Python code
-* Include model creation, model training, and plotting code.
-
-#### Generator Model
-* Turn in your best generator saved as “generator.pt” and the weights of your generator saved as “generator_weights.pt”.
-
-
-## Grading
-
-#### Report (70%)
-
-* Set of experiments performed: 30 points
-* Special skills: 20 points
-* Visualization: 20 points
-
-#### Code (20%) 
-
-To achieve full marks for the coding portion of your assignment, it's crucial that your submitted scripts are operational. This entails that upon testing with a small dataset, your code must execute flawlessly, demonstrating its ability to generate images as intended.
-
-###### Evaluation Process:
-
-We will use an evaluation.py script to assess the functionality of your code. This script, designed to test your code's image generation capabilities, will be run using a sample dataset. A sample of the evaluation.py script is made available.
-
-###### Flexibility with the Sample Code:
-
-While the provided sample of evaluation.py serves as a guideline for how your code will be evaluated, you are encouraged to modify this script as necessary to suit your code's requirements.
-
-###### Criteria for Full Credits:
-
-Functionality: Your submission must run without errors and generate images correctly when tested with the evaluation script, whether it's the original or a modified version of evaluation.py. Otherwise, you may lose some points based on your error. These are recommendations for a Successful Submission:
-
-* Code Clarity: Ensure your code is well-commented and organized.
-* Include Dependencies: Verify that all necessary files and dependencies are included in your submission to prevent runtime errors.
-
-#### Model (10%)
-
-You can get full credits if all the generated images can be recognized, otherwise, you may lose some points. Also, the code you submitted should be able to generate all 10 different digits.
-
-## Bonus (10 points)
-
-Generate images from other data sources or train a variation of basic GAN model e.g., cGAN, CycleGAN, as we introduced in the lecture).
 
 * Data set
 
