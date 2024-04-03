@@ -139,15 +139,6 @@ plt.show()
 
   You can use any deep learning package, such as Pytorch, etc.
   
-* Deliverable
-
-  * Code
-  
-  * Model
-  
-  * README file (How to compile and load the model to generate images)
-  
-  * 25 generated images
 
 ## Tips for Using GPU on Turing Server
 
